@@ -1,0 +1,12 @@
+Some small shell wrapper.
+
+------
+1. j++
+
+A simple wrapper to invoke g++, useful when compile single simple unit.
+and to generate detailed asm code with source code inside.
+
+2. ...
+
+------
+

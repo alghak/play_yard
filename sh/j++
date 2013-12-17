@@ -1,0 +1,22 @@
+#!/bin/sh
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 cc_file_name [-S]"
+    echo "-S   : generate detailed asm code."
+    exit 1
+fi
+
+cc_file=$1
+# may not work well with filename like 'xxx.yyy.cc'
+out_file=`echo $cc_file | cut -d. -f1`
+
+
+# generate detailed asm code, with cc source code inside.
+if [ $# -eq 2 ] && [ $2 = "-S" ]
+then
+    gcc -c -g -Wa,-adlhn $cc_file > $out_file".S"
+    exit 0
+fi
+
+g++ -Wall -ggdb $cc_file -o $out_file
+exit 0
