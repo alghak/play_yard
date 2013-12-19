@@ -6,7 +6,14 @@ Some small shell wrapper.
 A simple wrapper to invoke g++, useful when compile single simple unit.
 and to generate detailed asm code with source code inside.
 
-2. ...
+2. vote.sh
+
+A script to vote on web using fake ip.
+
+3. get_126_contacts.sh
+
+A script which get contact list of netease 126 mail.
+It's dependent on netease's email http protocal. So I can't guarantee it will work well.
 
 ------
 
