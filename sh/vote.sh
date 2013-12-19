@@ -19,8 +19,7 @@ do
     ip4=`echo "$rd%255" | bc`
     random_ip="$ip1.$ip2.$ip3.$ip4"
     echo "idx: $i, ip: $random_ip"
-    curl -H "X-Forwarded-For: $random_ip" http://www.lygfgwh.com/toupiao.asp?id=39
-#curl -H "X-Forwarded-For: $random_ip" http://98.126.242.202/toupiao.asp?id=39
+    curl -H "X-Forwarded-For: $random_ip" http://www.some_poor_site.com/toupiao.asp?id=39
     sleep 2
 done
 
